@@ -1,0 +1,21 @@
+{
+  "name": "elder-plugin-rss",
+  "version": "0.0.1",
+  "description": "Generate RSS feed based on plugin-markdown posts.",
+  "keywords": [
+    "elder.js",
+    "elderjs",
+    "svelte",
+    "ssg",
+    "static",
+    "site",
+    "generator",
+    "rss"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "dependencies": {
+    "fs-extra": "^9.1.0",
+    "rss-generator": "^0.0.3"
+  }
+}
