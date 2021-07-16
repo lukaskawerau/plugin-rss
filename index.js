@@ -2,24 +2,6 @@ const RSS = require('rss-generator');
 const fs = require('fs-extra');
 const path = require('path');
 
-let sortArticles = function (prop, arr) {
-  prop = prop.split('.');
-  var len = prop.length;
-
-  arr.sort(function (a, b) {
-      var i = 0;
-      while( i < len ) { a = a[prop[i]]; b = b[prop[i]]; i++; }
-      if (a < b) {
-          return -1;
-      } else if (a > b) {
-          return 1;
-      } else {
-          return 0;
-      }
-  });
-  return arr;
-};
-
 const defaultRSSDate = new Date(Date.now());
 
 const plugin = {
@@ -110,7 +92,7 @@ const plugin = {
     feedCategories: [],
     feedPubDate: defaultRSSDate,
     feedTTL: '60',
-    markdownRoute: ['blog'],
+    markdownRoute: 'blog',
   }
 };
 
